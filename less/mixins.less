@@ -1,1 +1,42 @@
 // Mixins Here
+
+// Align items as a flex box
+// .flexAlign(space-between);
+.flexAlign(@justify: center, @align: center){
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+// Create a black button with hover effects to
+// reverse background and text colors;
+.sigBlack-btn(@btnWidth, @btnHeight) {
+  .btnKeyframes(noHoverAni, #fff, #000);
+  .createAni(noHoverAni, 0.25s);
+
+  border: 1px solid black;
+  border-radius: 5px;
+  width: @btnWidth;
+  height: @btnHeight;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    .btnKeyframes(hoverAni, #000, #fff);
+    .createAni(hoverAni, 0.25s);
+  }
+}
+
+// Keyframe to swap background and text colors;
+.btnKeyframes(@kfName, @bgColor, @fontColor){
+  @keyframes @kfName {
+    from {background: @bgColor; color: @fontColor;}
+    to {background: @fontColor; color: @bgColor;}
+  }
+}
+
+.createAni(@kfName, @aniDur){
+  animation-name: @kfName;
+  animation-duration: @aniDur;
+  animation-fill-mode: both;
+}
