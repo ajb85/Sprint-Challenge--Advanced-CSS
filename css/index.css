@@ -327,3 +327,71 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+.signup form {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.signup h2 {
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+.signup p {
+  margin-bottom: 30px;
+}
+.signup span {
+  font-size: 2rem;
+}
+.signup button {
+  animation-name: noHoverAni;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 200px;
+  height: 35px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+@keyframes noHoverAni {
+  from {
+    background: #fff;
+    color: #000;
+  }
+  to {
+    background: #000;
+    color: #fff;
+  }
+}
+.signup button:hover {
+  animation-name: hoverAni;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+}
+@keyframes hoverAni {
+  from {
+    background: #000;
+    color: #fff;
+  }
+  to {
+    background: #fff;
+    color: #000;
+  }
+}
+.signup section {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.signup section div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
