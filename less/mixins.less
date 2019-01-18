@@ -9,6 +9,7 @@
 }
 // Create a black button with hover effects to
 // reverse background and text colors;
+// .sigBlack-btn(200px, 40px) {
 .sigBlack-btn(@btnWidth, @btnHeight) {
   .btnKeyframes(noHoverAni, #fff, #000);
   .createAni(noHoverAni, 0.25s);
@@ -35,6 +36,7 @@
   }
 }
 
+// Creates the animation from inputted keyframe
 .createAni(@kfName, @aniDur){
   animation-name: @kfName;
   animation-duration: @aniDur;
