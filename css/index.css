@@ -350,6 +350,7 @@ footer {
   margin-top: 143px;
 }
 .signup form {
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
