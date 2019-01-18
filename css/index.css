@@ -161,6 +161,10 @@ p {
   margin: 0 auto;
 }
 div.myNav {
+  position: fixed;
+  z-index: 1;
+  opacity: 0.8;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -185,6 +189,18 @@ div.myNav nav a {
   color: #000;
   font-size: 1.8rem;
 }
+@keyframes textUnderline {
+  to {
+    text-decoration: underline;
+    color: #fff;
+    text-shadow: 2px 2px 8px #FF0000;
+  }
+}
+div.myNav nav a:hover {
+  animation-name: textUnderline;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -194,6 +210,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home {
+  margin-top: 103px;
 }
 .home header.intro h2 {
   padding: 15px;
@@ -327,8 +346,10 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+.signup {
+  margin-top: 143px;
+}
 .signup form {
-  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,6 +415,9 @@ footer {
   align-items: center;
   width: 100%;
   margin-bottom: 30px;
+}
+.about {
+  margin-top: 103px;
 }
 .about .intro {
   border-bottom: 1px groove red;

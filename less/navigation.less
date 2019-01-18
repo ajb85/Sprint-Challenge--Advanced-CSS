@@ -2,6 +2,11 @@
 
 div.myNav {
   // Centered alignment flex box
+  position: fixed;
+  z-index: 1;
+  opacity: 0.8;
+  top: 0;
+
   .flexAlign(space-between);
   flex-direction: column;
   width: 100%;
@@ -21,6 +26,14 @@ div.myNav {
       text-decoration: none;
       color: #000;
       font-size: 1.8rem;
+      @keyframes textUnderline {
+        to { text-decoration: underline; color: #fff; text-shadow: 2px 2px 8px #FF0000;}
+      }
+      &:hover {
+        animation-name: textUnderline;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
     }
   }
 }
