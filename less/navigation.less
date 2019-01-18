@@ -1,1 +1,39 @@
 // Navigation code here
+
+div.myNav {
+  // Centered alignment flex box
+  position: fixed;
+  z-index: 1;
+  opacity: 0.8;
+  top: 0;
+
+  .flexAlign(space-between);
+  flex-direction: column;
+  width: 100%;
+  background: #F6F6F6;
+
+  h1{
+    padding-top: 15px;
+    font-size: 4rem;
+  }
+  nav{
+    padding: 15px 0;
+    .flexAlign(space-between);
+    width: 100%;
+    max-width: 380px;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.8rem;
+      @keyframes textUnderline {
+        to { text-decoration: underline; color: #fff; text-shadow: 2px 2px 8px #FF0000;}
+      }
+      &:hover {
+        animation-name: textUnderline;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}

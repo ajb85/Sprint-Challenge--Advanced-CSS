@@ -1,0 +1,41 @@
+.signup{
+  // Pushing content below fixed nav
+  margin-top: 143px;
+  // General styles for the signup form
+  form {
+    margin-bottom: 100px;
+    .flexAlign;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    text-decoration: underline;
+  }
+
+  p{
+    margin-bottom: 30px;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  button {
+    .sigBlack-btn(200px, 35px);
+  }
+
+  // Container for divs, each div containing span+input
+  section {
+    width: 350px;
+
+    .flexAlign;
+    flex-direction: column;
+    // Each individual span+input
+    div {
+      .flexAlign(space-between);
+      width:100%;
+      margin-bottom: 30px;
+    }
+  }
+}
