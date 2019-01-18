@@ -1,0 +1,67 @@
+.about {
+
+  .intro {
+    border-bottom: 1px groove red;
+    margin-bottom: 20px;
+    // General styles for the header
+    h2 {
+      padding: 20px 0;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+    }
+
+
+  } // intro
+
+  main {
+    section {
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      div {
+        .flexAlign(space-between);
+        margin-bottom: 20px;
+
+        // Switch to column on mobile for extra space
+        @media @phone {
+          flex-direction: column;
+          padding: 10px;
+        }
+
+        img {
+          width: 50%;
+
+          // Give img extra space on mobile
+          @media @phone {
+            width: 95%;
+          }
+        }
+
+        p {
+          // Text needs breathing room on mobile
+          @media @phone {
+            margin-bottom: 20px;
+          }
+        }
+        // Reverse direction of second row
+        &:last-child {
+          flex-direction:row-reverse;
+          // Switch to column on mobile for extra space
+          @media @phone {
+            flex-direction: column;
+            //Content divide for mobile
+            border-top: 1px solid black;
+            padding-top: 20px;
+          }
+        }
+
+      } // div
+    } // section
+  } // main
+
+} // about
